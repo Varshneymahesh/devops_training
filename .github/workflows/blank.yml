@@ -25,7 +25,7 @@ jobs:
     - name: Docker Tag
       run: docker tag hello-world monuindia01/hello-word
     - name: Docker Push
-      run: docker push monuindia01/hello-word   
+      run: docker push monuindia01/hello-word
   LogintodockerhubQA:
     runs-on: ubuntu-latest
     environment: Qa
