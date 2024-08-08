@@ -20,6 +20,12 @@ jobs:
        registry: registry-1.docker.io
        username: ${{secrets.DOCKERHUBUSERNAME}}
        password: ${{secrets.DOCKERHUBPASSWORD}}
+    - name: Docker Pull
+      run: docker pull hello-world
+    - name: Docker Tag
+      run: docker tag hello-world monuindia01/hello-word
+    - name: Docker Push
+      run: docker push monuindia01/hello-word   
   LogintodockerhubQA:
     runs-on: ubuntu-latest
     environment: Qa
